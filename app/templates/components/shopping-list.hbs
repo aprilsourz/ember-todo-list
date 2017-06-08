@@ -5,3 +5,10 @@
     {{shopping-list/item item=item deleteItem="deleteItem" toggleItemDone='toggleItemDone'}}
   {{/each}}
 </ul>
+<form class="form-group" {{action 'createItem' on='submit'}}>
+  {{input placeholder="NewItem"
+    class='input-group form-control'
+    value=newItem.content
+  }}
+
+</form>
