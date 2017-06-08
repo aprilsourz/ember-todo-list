@@ -22,7 +22,7 @@ export default Ember.Component.extend({
     let data = this.get('newItem');
     data.list = this.get('list');
     this.sendAction('createItem', data);
-    this.set('newItem.content', null)
+    this.set('newItem.content', null);
   }
 }
 
