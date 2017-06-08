@@ -8,5 +8,8 @@ export default Ember.Component.extend({
     toggleDone () {
       this.sendAction('toggleItemDone',this.get('item'));
     },
+    deleteItem() {
+      this.sendAction('deleteItem', this.get('item'))
+    }
   },
 });
