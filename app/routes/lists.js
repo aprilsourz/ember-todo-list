@@ -6,8 +6,5 @@ export default Ember.Route.extend({
 
   },
   actions: {
-    editList(list) {
-      console.log(list)
-    }
   }
 });
