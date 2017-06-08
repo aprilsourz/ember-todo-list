@@ -1,6 +1,6 @@
 <h2>ListR</h2>
 {{#each model as |list|}}
-  {{shopping-list/card list=list}}
+  {{shopping-list/card list=list deleteList='deleteList'}}
 {{/each}}
 
 {{#link-to 'index'}}<button>Home</button>{{/link-to}}

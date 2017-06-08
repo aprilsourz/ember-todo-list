@@ -8,6 +8,10 @@ export default Ember.Route.extend({
     createList(data){
       let list = this.get('store').createRecord('list', data);
       list.save()
+  },
+  deleteList(data){
+    let list = data;
+    list.destroyRecord()
   }
 }
 });
