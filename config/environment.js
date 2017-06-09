@@ -2,11 +2,12 @@
 
 module.exports = function (environment) {
   'use strict';
-  const ENV = {
+  var ENV = {
     modulePrefix: 'ga-wdi-boston.ember-resources',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -36,10 +37,11 @@ module.exports = function (environment) {
     ENV.apiHost = `http://localhost:${port}`;
   }
 
-  if (environment === 'test') {
+  if (environment === 'production') {
     // Testem prefers this...
-    ENV.rootUrl = '/';
-    ENV.locationType = 'none';
+    ENV.rootUrl = '/ember-todo-list';
+    ENV.locationType = 'hash';
+    ENV.apiHost = 'https://mysterious-reef-98629.herokuapp.com/';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
